@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skill Root | Learn Skills from Root</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1f4e79;
+      --secondary: #e8f1f8;
+      --dark: #0f2f4a;
+      --light: #ffffff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: var(--secondary); color: var(--dark); scroll-behavior: smooth; }
+
+    header {
+      background: var(--light);
+      padding: 15px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      z-index: 1000;
+    }
+
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo img { width: 55px; height: 55px; border-radius: 50%; border: 3px solid var(--primary); }
+    .logo span { font-size: 22px; font-weight: 600; color: var(--primary); }
+
+    nav ul { list-style: none; display: flex; gap: 28px; }
+    nav a { text-decoration: none; color: var(--dark); font-weight: 500; position: relative; }
+    nav a::after { content: ''; position: absolute; width: 0; height: 3px; background: var(--primary); left: 0; bottom: -6px; transition: .3s; }
+    nav a:hover::after { width: 100%; }
+    nav a:hover { color: var(--primary); }
+
+    section { padding: 80px 60px; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero h1 { font-size: 46px; color: var(--primary); margin-bottom: 20px; }
+    .hero p { font-size: 18px; line-height: 1.7; margin-bottom: 30px; }
+    .btn {
+      display: inline-block;
+      padding: 14px 34px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: .3s;
+    }
+    .btn:hover { background: var(--dark); transform: translateY(-3px); }
+
+    .hero img { max-width: 420px; width: 100%; justify-self: center; }
+
+    .section-title { text-align: center; font-size: 34px; color: var(--primary); margin-bottom: 50px; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: .4s;
+      text-align: center;
+    }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+    .card h3 { margin-bottom: 15px; color: var(--primary); }
+
+    .about { max-width: 900px; margin: auto; text-align: center; font-size: 18px; line-height: 1.8; }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .contact-buttons { display: flex; justify-content: center; gap: 25px; margin-top: 30px; }
+
+    .call, .whatsapp {
+      padding: 14px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      color: #fff;
+      transition: .3s;
+    }
+
+    .call { background: #1f4e79; }
+    .whatsapp { background: #25D366; }
+    .call:hover, .whatsapp:hover { transform: scale(1.08); }
+
+    footer {
+      background: var(--dark);
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+    }
+
+    @media(max-width: 900px) {
+      header { padding: 15px 25px; }
+      section { padding: 70px 25px; }
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      nav ul { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="skillRoot.jpeg" alt="Skill Root Logo">
+    <span>Skill Root</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h1>Grow Your Skills From the Root</h1>
+    <p>Skill Root is a skill-based learning platform where we teach SEO, Web Development, Digital Marketing and modern tech skills from beginner to advanced level with practical approach.</p>
+    <a href="#services" class="btn">Explore Services</a>
+  </div>
+  <img src="seo.png" alt="Skill Root">
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Skill Root</h2>
+  <div class="about">
+    <p>Skill Root was created with one clear mission – to help students, beginners and professionals learn high-demand digital skills from the root level. We believe in practical learning, real-world examples and step-by-step guidance so anyone can build confidence and succeed in the digital world.</p>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="cards">
+    <div class="card"><h3>SEO Training</h3><p>Complete SEO training including on-page, off-page, technical SEO and tools.</p></div>
+    <div class="card"><h3>Web Development</h3><p>Learn HTML, CSS, JavaScript and modern website development.</p></div>
+    <div class="card"><h3>Digital Marketing</h3><p>Google Ads, social media marketing and online branding strategies.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <div class="contact-box">
+    <p>Want to learn skills or grow your business? Contact Skill Root today.</p>
+    <div class="contact-buttons">
+      <a href="tel:+919999999999" class="call">📞 Call Now</a>
+      <a href="https://wa.me/919999999999" target="_blank" class="whatsapp">💬 WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Skill Root. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
